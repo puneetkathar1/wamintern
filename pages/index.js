@@ -53,7 +53,7 @@ const Index = () => {
     emailEditorRef.current.editor.exportHtml((data) => {
       const { design} = data;
       console.log(design)
-      axios.post('http://localhost:5000/savedesign', {
+      axios.post('https://api2-puneet.herokuapp.com/savedesign', {
         design: design
 
       })
@@ -73,7 +73,7 @@ const Index = () => {
  
 
   const loadDB = () => {
-    axios.get('http://localhost:5000/getdesign')
+    axios.get('https://api2-puneet.herokuapp.com/getdesign')
     .then(function (response) {
       
      console.log(response.data)
